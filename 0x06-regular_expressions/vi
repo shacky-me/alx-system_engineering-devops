@@ -1,3 +1,4 @@
-#!/usr/bin/env ruby
-# checks for matching cases
-puts ARGV[0].scan(/^[1234567890]{10}$/).join
+./6-phone_number.rb 4155049898 | cat -e
+./6-phone_number.rb " 4155049898" | cat -e
+./6-phone_number.rb "415 504 9898" | cat -e
+./6-phone_number.rb "415-504-9898" | cat -e

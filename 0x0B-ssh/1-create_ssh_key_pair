@@ -1,22 +1,4 @@
-#!/bin/bash
-
-# Key name
-key_name="school"
-
-# Key size (bits)
-key_size=4096
-
-# Passphrase
-passphrase="betty"
-
-# Generate the key pair
-ssh-keygen -t rsa -b $key_size -f "$key_name" -C "" -N "$passphrase"
-
-# Display success message
-echo "RSA key pair created successfully!"
-echo "Private key: ${key_name}"
-echo "Public key: ${key_name}.pub"
-
-# Note on security (optional)
-echo "**Warning:** Using a key size of 4096 bits is not recommended for most modern security practices. Consider using a stronger key size (e.g., 2048 or higher) for production environments."
-
+#!/usr/bin/env bash
+# Bash script that creates an RSA key pair
+#ssh-keygen -b 4096 -P betty -f school
+ssh-keygen -t rsa -b 4096 -P betty -f school
